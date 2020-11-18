@@ -14,7 +14,8 @@ ENV LANG=C.UTF-8
 RUN mkdir -p /usr/local/java/ && \
     wget https://download.bell-sw.com/java/15.0.1+9/bellsoft-jdk15.0.1+9-linux-amd64-full.tar.gz && \
     tar xzvf bellsoft-jdk15.0.1+9-linux-amd64-full.tar.gz && \
-    mv jdk-15.0.1-full /usr/local/java/jdk-15
+    mv jdk-15.0.1-full /usr/local/java/jdk-15 && \
+    rm bellsoft-jdk15.0.1+9-linux-amd64-full.tar.gz
 
 RUN mkdir /application
 WORKDIR /application
