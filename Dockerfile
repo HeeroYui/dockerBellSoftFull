@@ -4,7 +4,7 @@ FROM archlinux:latest
 RUN pacman -Syu --noconfirm && pacman-db-upgrade
 #install jdk-openjdk java-openjfx
 ####RUN pacman -S --noconfirm jdk-openjdk java-openjfx
-RUN pacman -S --noconfirm tree libxext libxrender libxtst xorg
+RUN pacman -S --noconfirm tree libxext libxrender libxtst xorg wget
 # clean all the caches
 RUN pacman -Scc --noconfirm
 
