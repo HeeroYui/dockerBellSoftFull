@@ -3,7 +3,7 @@ FROM archlinux:latest
 # update system
 RUN pacman -Syu --noconfirm && \
     pacman-db-upgrade && \
-    pacman -S --noconfirm libxext libxrender libxtst xorg wget && \
+    pacman -S --noconfirm libxext libxrender libxtst xorg wget ttf-dejavu && \
     pacman -Scc --noconfirm
 
 ENV JAVA_HOME=/usr/local/java/jdk-15
